@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu peso hasta el infinito y más allá</title>
+</head>
+   <body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en <strong>otro planeta...</strong></p>
+    <script>
+        var usuario = prompt ("¿Cuál es tu peso? (no me mientas...)");
+        var peso = parseInt (usuario);
+        var planet_choice = prompt ("Elige un planeta donde comenzar tu nueva vida fitness. Marte, Júpiter, Saturno...\nHay tantos por escoger.");
+        var planeta = planet_choice;
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var g_mercurio = 3.7;
+        var g_venus = 8.87;
+        var g_saturno = 10.4;
+        var g_urano = 8.8;
+        var g_neptuno = 11.1;
+        var nombre = "";
+       switch (planeta) {
+          case 'Marte': case 'marte':
+            var g_planeta = g_marte
+            var nombre = "Marte"
+          break;
+          case 'Júpiter': case 'júpiter': case 'jupiter': case 'Jupiter':
+            var g_planeta = g_jupiter
+            var nombre = "Júpiter"
+          break;
+          case 'Mercurio': case 'mercurio':
+            var g_planeta = g_mercurio
+            var nombre = "Mercurio"
+          break;
+          case 'venus': case 'Venus':
+            var g_planeta = g_venus
+            var nombre = "Venus"
+          break;
+          case 'saturno': case 'Saturno':
+            var g_planeta = g_saturno
+            var nombre = "Saturno"
+          break; 
+          case 'Urano': case 'Urano':
+            var g_planeta = g_urano
+            var nombre = "Urano"
+          break;
+          case 'neptuno': case 'Neptuno':
+            var g_planeta = g_neptuno
+            var nombre = "Neptuno"
+          break;
+       }
+       var peso_calculo = (peso * g_planeta / g_tierra);
+       var peso_final;
+        peso_final = (peso_calculo.toFixed(2));
+        document.write("Tu peso en " + nombre + " sería <strong>" + peso_final + " Kg</strong>");
+    </script>
+   </body>
+</html>
